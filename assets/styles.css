@@ -77,7 +77,7 @@ nav {
 }
 
 .hero-title {
-  font-family: var(--font-display);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(7rem, 13vw, 14rem);
   line-height: 0.88; color: var(--black);
   margin-bottom: 1.8rem;
