@@ -89,6 +89,12 @@ nav {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+.hero-title::before,
+.hero-title::after {
+    display: none !important;
+    content: none !important;
+}
+
 .hero-subtitle {
   font-size: 0.62rem; letter-spacing: 0.18em;
   text-transform: uppercase;
