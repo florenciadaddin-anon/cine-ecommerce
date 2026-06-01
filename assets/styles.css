@@ -82,6 +82,10 @@ nav {
   line-height: 0.88; color: var(--black);
   margin-bottom: 1.8rem;
   animation: slideUp 0.9s cubic-bezier(0.16,1,0.3,1) both;
+  .hero-title {
+  caret-color: transparent;
+  user-select: none;
+}
 }
 
 @keyframes slideUp {
