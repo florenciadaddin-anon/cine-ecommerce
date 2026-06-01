@@ -185,8 +185,3 @@ nav {
     border-right: none !important;
 }
 
-.hero-title::before,
-.hero-title::after {
-    content: none !important;
-    display: none !important;
-}
