@@ -29,7 +29,7 @@
   <section class="hero">
     <div class="hero-left">
       <h1 class="hero-title">SOLAR</h1>
-      <p class="hero-subtitle">ALQUILER DE EQUIPO<br>CINEMATOGRÁFICO PROFESIONAL</p>
+      <p class="hero-subtitle">ALQUILER DE LUCES,ACCESORIOS Y GRIPERIA<br>PROFESIONAL</p>
       <div class="hero-actions">
         <button class="btn-primary">Ver Catálogo</button>
         <button class="btn-ghost">Retiro</button>
@@ -71,12 +71,12 @@
         <div class="titulo-filtro"><span>CATEGORÍA</span><span>−</span></div>
         <ul class="opciones">
           <li><a href="catalogo.html" class="activo">Todos</a></li>
-          <li><a href="catalogo-camaras.html">Cámaras</a></li>
-          <li><a href="catalogo-opticas.html">Ópticas</a></li>
-          <li><a href="catalogo.html">Iluminación</a></li>
-          <li><a href="catalogo.html">Audio</a></li>
-          <li><a href="catalogo.html">Estabilización</a></li>
-          <li><a href="catalogo.html">Accesorios</a></li>
+          <li><a href="catalogo-griperia.html">Gripería</a></li>
+          <li><a href="catalogo-accesorios.html">Accesorios</a></li>
+          <li><a href="catalogo-luz.html">Iluminación</a></li>
+          <li hidden><a href="catalogo.html" >Audio</a></li>
+          <li hidden><a href="catalogo.html" >Estabilización</a></li>
+          <li hidden><a href="catalogo.html" >Accesorios</a></li>
         </ul>
       </div>
 
@@ -258,14 +258,97 @@
   </div>
 </section>
 
-</section>
-  <section class="retiro">
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, expedita quod dolorum dolores ea nemo ipsam tempore ipsa obcaecati vero inventore, vel a ipsum quis natus sit fugiat earum tenetur!
+<!-- ====== SECCIÓN PUNTO DE RETIRO ====== -->
+<section class="retiro con-navbar">
+
+  <p class="etiqueta-seccion">CÓMO ENCONTRARNOS</p>
+  <h1>Punto de retiro</h1>
+
+  <div class="retiro-grid">
+
+    <!-- COLUMNA IZQUIERDA: DATOS -->
+    <div class="datos">
+
+      <div class="dato">
+        <span class="dato-icono">📍</span> 
+        <div>
+          <p class="dato-titulo">DIRECCIÓN</p>
+          <p class="dato-texto">Malabia 1265<br>Buenos Aires, Argentina</p>
+        </div>
+      </div>
+
+      <div class="dato">
+        <span class="dato-icono">🕐</span>
+        <div>
+          <p class="dato-titulo">HORARIO</p>
+          <p class="dato-texto">Lunes a viernes — 9:00 a 18:00<br>Sábados — 10:00 a 14:00</p>
+        </div>
+      </div>
+
+      <div class="dato">
+        <span class="dato-icono">📞</span>
+        <div>
+          <p class="dato-titulo">CONTACTO DIRECTO</p>
+          <p class="dato-texto">+54 11 61021507<br>luces.solar@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="dato">
+        <span class="dato-icono">🚚</span>
+        <div>
+          <p class="dato-titulo">DELIVERY &amp; SET</p>
+          <p class="dato-texto">Disponible en AMBA y GBA<br>Coordinación previa requerida</p>
+        </div>
+      </div>
+
     </div>
-  </section>
+
+    <!-- COLUMNA DERECHA: MAPA con marcador animado -->
+  <div class="mapa">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.644734525456!2d-58.58126131647129!3d-34.51188988298784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcba8ac5ac0025%3A0x49b881c9ec920183!2sMalabia%201265%2C%20B1655%20Villa%20Jos%C3%A9%20Le%C3%B3n%20Su%C3%A1rez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1781366760307!5m2!1ses!2sar"
+    width="100%"
+    height="100%"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+  </div>
+
+  <!-- FORMULARIO DE CONTACTO -->
+  <div class="formulario">
+    <h2>Coordiná tu retiro</h2>
+    <p class="subtitulo">Dejanos tus datos y nos comunicamos para confirmar disponibilidad.</p>
+
+    <div class="campo">
+      <label for="nombre">Nombre y apellido</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Florencia D'Addino">
+    </div>
+
+    <div class="campo">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="tu@correo.com">
+    </div>
+
+    <div class="campo">
+      <label for="equipo">Equipo de interés</label>
+      <input type="text" id="equipo" name="equipo" placeholder="Ej: ALEXA Mini LF">
+    </div>
+
+    <div class="campo">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Contanos fechas y detalles del proyecto..."></textarea>
+    </div>
+
+    <button type="button" class="btn-enviar">Enviar consulta</button>
+  </div>
+
+</section>
  
- <!-- ====== FOOTER (reemplaza el footer viejo, va antes de </body>) ====== -->
+ <!-- ====== FOOTER====== -->
 <footer>
   <div class="footer-top">
     <div class="footer-marca">

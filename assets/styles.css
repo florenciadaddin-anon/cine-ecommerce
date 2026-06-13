@@ -351,6 +351,16 @@ nav {
     position: relative;
 }
 
+/* Esta regla aplica a TODAS las fotos del catálogo de una sola vez.
+   Cualquier <img> que pongas dentro de un .imagen-producto se va a
+   ver igual: llena el recuadro sin deformarse (object-fit: cover). */
+.catalogo .imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .catalogo .badge {
     position: absolute;
     top: 10px;
@@ -629,3 +639,202 @@ footer {
 }
 
 .footer-social { color: rgba(255,255,255,0.6); }
+
+/* ============================================
+   ESTILOS DE LA SECCIÓN PUNTO DE RETIRO
+   (pegar al final de tu styles.css)
+
+   Nota: usa las variables --cream, --gold, --black
+   que ya tenés definidas en :root. Si no las tuvieras,
+   reemplazá var(--gold) por #b88a3e, etc.
+   ============================================ */
+
+.retiro {
+    background-color: var(--cream);
+    color: #2b2b2b;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px 60px;
+    min-height: 100vh;
+}
+
+/* si la sección va con el navbar fijo arriba, deja aire */
+.con-navbar { padding-top: 52px; }
+
+.retiro .etiqueta-seccion {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.retiro h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #1c1c1c;
+}
+
+/* --- DATOS + MAPA en dos columnas --- */
+.retiro .retiro-grid {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.retiro .datos { width: 280px; flex-shrink: 0; }
+
+.retiro .dato {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.retiro .dato-icono { font-size: 18px; }
+
+.retiro .dato-titulo {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--gold);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.retiro .dato-texto {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- MAPA --- */
+.retiro .mapa {
+    flex-grow: 1;
+    height: 360px;
+    background-color: #d8d2c6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a857a;
+    font-size: 13px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* el puntito central del mapa */
+.retiro .marcador {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    background: var(--gold);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* el anillo que se expande y desvanece (animación de pulso) */
+.retiro .marcador::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(184, 138, 62, 0.5);
+    transform: translate(-50%, -50%);
+    animation: pulso 2s infinite ease-out;
+}
+
+/* @keyframes define los fotogramas: de chico y opaco a grande y transparente */
+@keyframes pulso {
+    0%   { width: 18px; height: 18px; opacity: 0.8; }
+    100% { width: 70px; height: 70px; opacity: 0; }
+}
+
+/* --- FORMULARIO DE CONTACTO --- */
+.retiro .formulario {
+    margin-top: 50px;
+    max-width: 520px;
+}
+
+.retiro .formulario h2 {
+    font-size: 24px;
+    color: #1c1c1c;
+    margin-bottom: 6px;
+}
+
+.retiro .formulario p.subtitulo {
+    font-size: 13px;
+    color: #8a857a;
+    margin-bottom: 24px;
+}
+
+.retiro .campo { margin-bottom: 18px; }
+
+.retiro .campo label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+/* transition: suaviza el cambio de borde y sombra al hacer foco */
+.retiro .campo input,
+.retiro .campo textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d4cfc3;
+    border-radius: 6px;
+    background: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #2b2b2b;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* :focus = cuando el campo está seleccionado */
+.retiro .campo input:focus,
+.retiro .campo textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(184, 138, 62, 0.15);
+}
+
+.retiro .campo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* botón con transición de color y leve desplazamiento al pasar el mouse */
+.retiro .btn-enviar {
+    background: var(--black);
+    color: #fff;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.retiro .btn-enviar:hover {
+    background: var(--gold);
+    transform: translateY(-2px);
+}
+
+.retiro .btn-enviar:active {
+    transform: translateY(0);
+}
+
+.retiro .mapa iframe {
+    border-radius: 8px;
+}
