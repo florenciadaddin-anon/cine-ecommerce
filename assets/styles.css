@@ -840,104 +840,121 @@ footer {
 }
 
 
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 
 @media (max-width: 900px) {
 
-  /* NAV: que no se amontone */
   nav {
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 14px 20px;
+    padding: 0 1.2rem;
   }
   .nav-links {
-    gap: 16px;
+    gap: 1.2rem;
   }
 
-  /* HERO: una columna en vez de dos */
+  /* HERO:*/
   .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-    gap: 30px;
-  }
-  .hero-actions {
-    justify-content: center;
-  }
-  .hero-img {
-    width: 100%;
+    grid-template-columns: 1fr;
     height: auto;
   }
-
-  /* CATÁLOGO: filtros arriba, productos abajo */
-  .contenedor {
-    grid-template-columns: 1fr;
+  .hero-left {
+    padding: 2.5rem 1.5rem;
+  }
+  .hero-right {
+    height: 60vh;
   }
 
-  /* PRODUCTOS: máximo 2 columnas */
-  .productos {
+  /* CATÁLOGO:*/
+  .catalogo {
+    padding: 40px 24px;
+  }
+  .catalogo .contenedor {
+    flex-direction: column;
+  }
+  .catalogo .filtros {
+    width: 100%;
+  }
+  /* 2 tarjetas por fila */
+  .catalogo .productos {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* RETIRO: una sola columna */
-  .retiro-grid {
-    grid-template-columns: 1fr;
+  /* RETIRO */
+  .retiro {
+    padding: 40px 24px;
   }
-  .mapa {
-    min-height: 320px;
+  .retiro .retiro-grid {
+    flex-direction: column;
   }
-
-  /* FOOTER */
-  .footer-top {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+  .retiro .datos {
+    width: 100%;
+  }
+  .retiro .mapa {
+    width: 100%;
+    height: 320px;
   }
 }
 
 
 @media (max-width: 600px) {
 
-  /* NAV: ocultar links del medio, dejar logo y carrito */
+  /* NAV: ocultar links del medio */
   .nav-links {
     display: none;
   }
 
   /* HERO */
-  .hero-title {
-    font-size: 64px;
+  .hero-left {
+    padding: 2rem 1.2rem;
+    align-items: flex-start;
   }
   .hero-actions {
     flex-direction: column;
+    align-items: stretch;
     width: 100%;
+    gap: 1rem;
   }
   .btn-primary,
   .btn-ghost {
     width: 100%;
+    text-align: center;
+  }
+  .hero-right {
+    height: 45vh;
   }
   .stats {
-    justify-content: center;
-    gap: 30px;
+    right: 1.2rem;
+    bottom: 1.5rem;
   }
 
-  /* CATÁLOGO header */
-  .catalogo-header h1 {
-    font-size: 48px;
+  /* CATÁLOGO */
+  .catalogo {
+    padding: 30px 16px;
   }
-
-  /* PRODUCTOS: una sola columna */
-  .productos {
+  .catalogo h1 {
+    font-size: 36px;
+  }
+  /*tarjetas */
+  .catalogo .productos {
     grid-template-columns: 1fr;
   }
 
-  /* FORMULARIO y secciones: menos padding lateral */
-  .catalogo,
+  /* RETIRO */
   .retiro {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 30px 16px;
+  }
+  .retiro h1 {
+    font-size: 36px;
+  }
+  .retiro .formulario {
+    max-width: 100%;
   }
 
   /* FOOTER: una columna */
   .footer-top {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 24px;
   }
   .footer-bottom {
     flex-direction: column;
