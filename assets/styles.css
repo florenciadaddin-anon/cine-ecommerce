@@ -838,3 +838,110 @@ footer {
 .retiro .mapa iframe {
     border-radius: 8px;
 }
+
+
+
+@media (max-width: 900px) {
+
+  /* NAV: que no se amontone */
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 20px;
+  }
+  .nav-links {
+    gap: 16px;
+  }
+
+  /* HERO: una columna en vez de dos */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* CATÁLOGO: filtros arriba, productos abajo */
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  /* PRODUCTOS: máximo 2 columnas */
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* RETIRO: una sola columna */
+  .retiro-grid {
+    grid-template-columns: 1fr;
+  }
+  .mapa {
+    min-height: 320px;
+  }
+
+  /* FOOTER */
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  /* NAV: ocultar links del medio, dejar logo y carrito */
+  .nav-links {
+    display: none;
+  }
+
+  /* HERO */
+  .hero-title {
+    font-size: 64px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+  }
+  .stats {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  /* CATÁLOGO header */
+  .catalogo-header h1 {
+    font-size: 48px;
+  }
+
+  /* PRODUCTOS: una sola columna */
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  /* FORMULARIO y secciones: menos padding lateral */
+  .catalogo,
+  .retiro {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* FOOTER: una columna */
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
